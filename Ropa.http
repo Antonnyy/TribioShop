@@ -1,0 +1,9 @@
+@baseUrl = http://localhost:10000
+
+### 1. Health Check
+GET {{baseUrl}}/
+Accept: application/json
+
+### 2. Listar todas las prendas (GET /api/ropa)
+GET {{baseUrl}}/api/ropa
+Accept: application/json

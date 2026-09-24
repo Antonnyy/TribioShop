@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Ejecutar API Ropa (.NET)",
+      "type": "dotnet",
+      "request": "launch",
+      "projectPath": "${workspaceFolder}/Ropa.csproj",
+      "env": {
+        "PORT": "10000"
+      }
+    }
+  ]
+}
