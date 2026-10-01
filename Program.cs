@@ -18,8 +18,8 @@ var app = builder.Build();
 app.UseCors();
 
 // ============================================================================
-// CATÁLOGO CENTRAL DE POLOS EN MEMORIA (LISTO PARA CRUD Y FILTRADO POR API)
-// Puedes cambiar o pegar las URLs de tus imágenes en el campo "Imagen"
+// CATÁLOGO CENTRAL DE 10 POLOS EN MEMORIA (STOCK TOTAL: 223 UNIDADES)
+// Sincronizado con las URLs de imágenes actualizadas desde el Dashboard CRUD
 // ============================================================================
 var polos = new List<PoloItem>
 {
@@ -45,8 +45,7 @@ var polos = new List<PoloItem>
         Descuento = 15,
         EsNuevo = true,
         FechaCreacion = DateTime.UtcNow.AddDays(-1),
-        // PEGA AQUÍ LA URL DE TU IMAGEN (POLO NEGRO):
-        Imagen = "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop&q=80",
+        Imagen = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY6OaHkKoroztqpuqslJpL8TJsiNO9rMavgD5D23KaEsR4slSKsKP_b7o&s=10",
         Descripcion = "Polo corte oversize confeccionado en algodón tangüis pesado de 280 GSM con hombros caídos y cuello acanalado reforzado."
     },
     new PoloItem
@@ -65,35 +64,11 @@ var polos = new List<PoloItem>
         Marca = "Nike",
         Material = "Algodón Peinado 260 GSM",
         Temporada = "Todo el año",
-        Descuento = 0,
+        Descuento = 10,
         EsNuevo = true,
         FechaCreacion = DateTime.UtcNow.AddDays(-2),
-        // PEGA AQUÍ LA URL DE TU IMAGEN (POLO NEGRO):
-        Imagen = "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800&auto=format&fit=crop&q=80",
+        Imagen = "https://www.thecultperu.com.pe/cdn/shop/files/207338-1200-auto.jpg?v=1785959703&width=533",
         Descripcion = "Silueta cuadrada Boxy Fit con bordado minimalista en el pecho y caída estructurada."
-    },
-    new PoloItem
-    {
-        Id = 3,
-        Codigo = "POL-003",
-        Nombre = "Karl Kani Signature Graphic Street Tee",
-        Categoria = "Polos",
-        Subcategoria = "Gráfico",
-        Genero = "Unisex",
-        Talla = "S, M, L",
-        Color = "Negro",
-        ColorHex = "#111111",
-        Precio = 149.00,
-        Stock = 18,
-        Marca = "Karl Kani",
-        Material = "Algodón Heavy Jersey",
-        Temporada = "Verano",
-        Descuento = 10,
-        EsNuevo = false,
-        FechaCreacion = DateTime.UtcNow.AddDays(-10),
-        // PEGA AQUÍ LA URL DE TU IMAGEN (POLO NEGRO):
-        Imagen = "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800&auto=format&fit=crop&q=80",
-        Descripcion = "Estampado gráfico urbano en alta densidad con firma clásica hip-hop de los 90."
     },
 
     // ==========================================
@@ -115,11 +90,10 @@ var polos = new List<PoloItem>
         Marca = "Tribio",
         Material = "Algodón Pima Peruano 240 GSM",
         Temporada = "Todo el año",
-        Descuento = 0,
+        Descuento = 10,
         EsNuevo = true,
         FechaCreacion = DateTime.UtcNow.AddHours(-12),
-        // PEGA AQUÍ LA URL DE TU IMAGEN (POLO BLANCO):
-        Imagen = "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=800&auto=format&fit=crop&q=80",
+        Imagen = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtMBOu9jcR1u-Mm3uHY6l5ozg6l0eFewgZ3mKrYYhL5Q&s=10",
         Descripcion = "Polo blanco esencial de tacto frío en algodón Pima peruano, ideal para outfits limpios y uso diario."
     },
     new PoloItem
@@ -141,32 +115,8 @@ var polos = new List<PoloItem>
         Descuento = 15,
         EsNuevo = true,
         FechaCreacion = DateTime.UtcNow.AddDays(-3),
-        // PEGA AQUÍ LA URL DE TU IMAGEN (POLO BLANCO):
-        Imagen = "https://images.unsplash.com/photo-1527719327859-c6ce80353573?w=800&auto=format&fit=crop&q=80",
+        Imagen = "https://i.ebayimg.com/images/g/1-cAAOSwaONnxTO3/s-l1200.webp",
         Descripcion = "Edición inspirada en la cultura sneaker con gráfico Flight de archivo y ajuste holgado."
-    },
-    new PoloItem
-    {
-        Id = 6,
-        Codigo = "POL-006",
-        Nombre = "Adidas Originals Trefoil Boxy White",
-        Categoria = "Polos",
-        Subcategoria = "Boxy Fit",
-        Genero = "Unisex",
-        Talla = "S, M, L",
-        Color = "Blanco",
-        ColorHex = "#FFFFFF",
-        Precio = 135.00,
-        Stock = 28,
-        Marca = "Adidas",
-        Material = "Algodón Orgánico 250 GSM",
-        Temporada = "Primavera",
-        Descuento = 0,
-        EsNuevo = false,
-        FechaCreacion = DateTime.UtcNow.AddDays(-14),
-        // PEGA AQUÍ LA URL DE TU IMAGEN (POLO BLANCO):
-        Imagen = "https://images.unsplash.com/photo-1562157873-818bc0726f68?w=800&auto=format&fit=crop&q=80",
-        Descripcion = "Corte boxy contemporáneo en blanco puro con logo bordado tono sobre tono."
     },
 
     // ==========================================
@@ -191,8 +141,7 @@ var polos = new List<PoloItem>
         Descuento = 10,
         EsNuevo = true,
         FechaCreacion = DateTime.UtcNow.AddHours(-6),
-        // PEGA AQUÍ LA URL DE TU IMAGEN (POLO BEIGE):
-        Imagen = "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=800&auto=format&fit=crop&q=80",
+        Imagen = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY7d9P9YvFRW3FAHp-bNipiyPq1LBBtcjaSOQsAcQhtA&s=10",
         Descripcion = "Tono arena minimalista con hombros ultra caídos y etiqueta engomada en la espalda superior."
     },
     new PoloItem
@@ -211,11 +160,10 @@ var polos = new List<PoloItem>
         Marca = "Tribio",
         Material = "Algodón Tangüis 260 GSM",
         Temporada = "Verano",
-        Descuento = 0,
+        Descuento = 5,
         EsNuevo = false,
         FechaCreacion = DateTime.UtcNow.AddDays(-8),
-        // PEGA AQUÍ LA URL DE TU IMAGEN (POLO BEIGE):
-        Imagen = "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800&auto=format&fit=crop&q=80",
+        Imagen = "https://www.manelsanchez.com/uploads/media/images/800x800/adidas-essentials-logo-boxy-t-shirt-white-13.jpg.webp",
         Descripcion = "Color crema natural teñido con pigmentos orgánicos y corte cuadrado perfecto."
     },
 
@@ -241,32 +189,8 @@ var polos = new List<PoloItem>
         Descuento = 20,
         EsNuevo = true,
         FechaCreacion = DateTime.UtcNow.AddDays(-1),
-        // PEGA AQUÍ LA URL DE TU IMAGEN (POLO GRIS):
-        Imagen = "https://images.unsplash.com/photo-1503342394128-c104d54dba01?w=800&auto=format&fit=crop&q=80",
+        Imagen = "https://www.catlifestyle.pe/media/catalog/product/p/o/polos-hombre-caterpillar-cat-logo-pique-4010329-10122_1_jqmllckv2w4oalci.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=550&width=550&canvas=550:550",
         Descripcion = "Acabado gris carbón vintage lavado al ácido con serigrafía trasera de colección."
-    },
-    new PoloItem
-    {
-        Id = 10,
-        Codigo = "POL-010",
-        Nombre = "Nike Solo Swoosh Heather Grey Tee",
-        Categoria = "Polos",
-        Subcategoria = "Básico",
-        Genero = "Hombre",
-        Talla = "M, L, XL",
-        Color = "Gris",
-        ColorHex = "#52525B",
-        Precio = 139.00,
-        Stock = 30,
-        Marca = "Nike",
-        Material = "Algodón Jersey Suave",
-        Temporada = "Todo el año",
-        Descuento = 0,
-        EsNuevo = false,
-        FechaCreacion = DateTime.UtcNow.AddDays(-12),
-        // PEGA AQUÍ LA URL DE TU IMAGEN (POLO GRIS):
-        Imagen = "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=800&auto=format&fit=crop&q=80",
-        Descripcion = "Gris melange clásico de la línea Solo Swoosh con ajuste relajado y cuello reforzado."
     },
 
     // ==========================================
@@ -291,8 +215,7 @@ var polos = new List<PoloItem>
         Descuento = 12,
         EsNuevo = true,
         FechaCreacion = DateTime.UtcNow.AddDays(-2),
-        // PEGA AQUÍ LA URL DE TU IMAGEN (POLO VERDE):
-        Imagen = "https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?w=800&auto=format&fit=crop&q=80",
+        Imagen = "https://www.migamarra.pe/cdn/shop/files/skeep_fotos_tamano_app_2.025_ff917409-568b-4601-81ff-50716f81ad55.jpg?v=1752437397&width=1445",
         Descripcion = "Tono verde bosque profundo de estética cargo streetwear con costuras visibles."
     },
 
@@ -318,8 +241,7 @@ var polos = new List<PoloItem>
         Descuento = 15,
         EsNuevo = true,
         FechaCreacion = DateTime.UtcNow.AddDays(-4),
-        // PEGA AQUÍ LA URL DE TU IMAGEN (POLO ROJO):
-        Imagen = "https://images.unsplash.com/photo-1574180566232-aaad1b5b8450?w=800&auto=format&fit=crop&q=80",
+        Imagen = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcNFqHNI0R5BHxwNEizogLM62TiSmiChxaswj18Wzin10h4t73l4AxSlQ&s=10",
         Descripcion = "Rojo intenso inspirado en la herencia Chicago con estampado frontal de alto contraste."
     },
 
@@ -345,18 +267,13 @@ var polos = new List<PoloItem>
         Descuento = 10,
         EsNuevo = true,
         FechaCreacion = DateTime.UtcNow.AddDays(-3),
-        // PEGA AQUÍ LA URL DE TU IMAGEN (POLO AZUL):
-        Imagen = "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800&auto=format&fit=crop&q=80",
+        Imagen = "https://http2.mlstatic.com/D_NQ_NP_652074-MPE108572375763_032026-O.webp",
         Descripcion = "Polo manga larga en azul cobalto con puños acanalados y tres tiras clásicas en mangas."
     }
 };
 
-// Función auxiliar para asignar el color hexadecimal automáticamente según el nombre del color
 static string ResolverColorHex(string? color, string? hexActual)
 {
-    if (!string.IsNullOrWhiteSpace(hexActual) && hexActual.StartsWith("#"))
-        return hexActual;
-
     var c = (color ?? "").Trim().ToLowerInvariant();
     if (c.Contains("negro") || c.Contains("black")) return "#111111";
     if (c.Contains("blanco") || c.Contains("white")) return "#FFFFFF";
@@ -365,15 +282,15 @@ static string ResolverColorHex(string? color, string? hexActual)
     if (c.Contains("verde") || c.Contains("green") || c.Contains("olive")) return "#166534";
     if (c.Contains("rojo") || c.Contains("red")) return "#DC2626";
     if (c.Contains("azul") || c.Contains("blue") || c.Contains("navy")) return "#1D4ED8";
+
+    if (!string.IsNullOrWhiteSpace(hexActual) && hexActual.StartsWith("#"))
+        return hexActual;
+
     return "#18181B";
 }
 
 app.MapGet("/", () => "API TribioShop - Catálogo de Polos & CRUD funcionando correctamente");
 
-// ============================================================================
-// ENDPOINT PRINCIPAL Y FILTRADO DE POLOS:
-// Soporta ?color=Negro&marca=Nike&subcategoria=Oversize&talla=M&orden=recientes&buscar=texto
-// ============================================================================
 Func<string?, string?, string?, string?, string?, string?, IResult> filtrarPolosHandler =
     (string? color, string? marca, string? subcategoria, string? talla, string? orden, string? buscar) =>
 {
@@ -426,9 +343,6 @@ Func<string?, string?, string?, string?, string?, string?, IResult> filtrarPolos
 app.MapGet("/api/ropa", filtrarPolosHandler);
 app.MapGet("/api/ropa/polos", filtrarPolosHandler);
 
-// ============================================================================
-// ENDPOINT DE RESUMEN DE FILTROS DISPONIBLES (COLORES, MARCAS, ESTILOS)
-// ============================================================================
 app.MapGet("/api/ropa/filtros", () =>
 {
     var colores = polos
@@ -455,9 +369,6 @@ app.MapGet("/api/ropa/filtros", () =>
     });
 });
 
-// ============================================================================
-// CRUD COMPLETO PARA EL DASHBOARD DOCENTE (GET BY ID, POST, PUT, DELETE)
-// ============================================================================
 app.MapGet("/api/ropa/{id:int}", (int id) =>
 {
     var item = polos.FirstOrDefault(p => p.Id == id);
@@ -540,7 +451,7 @@ public class PoloItem
     public string Genero { get; set; } = "Unisex";
     public string Talla { get; set; } = "S, M, L, XL";
     public string Color { get; set; } = "Negro";
-    public string ColorHex { get; set; } = "#111111";
+    public string ColorHex { get; set; } = "";
     public double Precio { get; set; }
     public int Stock { get; set; }
     public string Marca { get; set; } = "Tribio";
